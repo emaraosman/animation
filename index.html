@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS animation project</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+  </head>
+  <body>
+
+<section id="animation-container">
+
+
+      <div id ="sunAnimation"></div>
+      <div id ="boy"></div>
+      <div id="aniOne"></div>
+      <div id="aniTwo"></div>
+      <div id="aniThree"></div>
+      <div id="aniFour"></div>
+
+
+
+<button type="button" name="button" onclick="sunMove(), switchImage(), aniOneMove(), aniTwoMove(), aniThreeMove(), aniFourMove()">don't click</button>
+
+    <!-- <div class="vertical-bar"> </div>
+
+    <div class="vertical-bar2"> </div>
+
+    <div class="vertical-bar3"> </div> -->
+
+
+
+
+  </section>
+
+
+  <audio id="johnnyboy" src="assets/stylesheets/timeisnow.mp3">
+
+  </audio>
+
+
+
+<script type="text/javascript">
+
+
+
+  function sunMove() {
+      var elem = document.getElementById("sunAnimation");
+      var pos = -600;
+      var id = setInterval(frame, 0.002);
+      function frame() {
+          if (pos == 0) {
+              clearInterval(id);
+          } else {
+              pos++;
+              // elem.style.top = pos + 'px';
+              elem.style.right = pos + 'px';
+          }
+      }
+  }
+
+  function aniOneMove() {
+      var elem = document.getElementById("aniOne");
+      var pos = -200;
+      var id = setInterval(frame, 0.002);
+      function frame() {
+          if (pos == 700) {
+              clearInterval(id);
+          } else {
+              pos++;
+              // elem.style.top = pos + 'px';
+              elem.style.left = pos + 'px';
+          }
+      }
+  }
+
+  function aniTwoMove() {
+      var elem = document.getElementById("aniTwo");
+      var pos = -400;
+      var id = setInterval(frame, 0.002);
+      function frame() {
+          if (pos == 500) {
+              clearInterval(id);
+          } else {
+              pos++;
+              // elem.style.top = pos + 'px';
+              elem.style.top = pos + 'px';
+          }
+      }
+  }
+
+  function aniThreeMove() {
+      var elem = document.getElementById("aniThree");
+      var pos = -400;
+      var id = setInterval(frame, 0.002);
+      function frame() {
+          if (pos == 300) {
+              clearInterval(id);
+          } else {
+              pos++;
+              // elem.style.top = pos + 'px';
+              elem.style.top = pos + 'px';
+          }
+      }
+  }
+
+  function aniFourMove() {
+      var elem = document.getElementById("aniFour");
+      var pos = -400;
+      var id = setInterval(frame, 0.002);
+      function frame() {
+          if (pos == 500) {
+              clearInterval(id);
+          } else {
+              pos++;
+              // elem.style.top = pos + 'px';
+              elem.style.bottom = pos + 'px';
+          }
+      }
+  }
+
+  function switchImage(){
+    document.getElementById("boy").style.backgroundImage = "url('https://media.giphy.com/media/TdfFVaF5eYtEY/giphy.gif')";
+    document.getElementById('animation-container').style.backgroundImage = "url('https://media.giphy.com/media/RlEjFVnD0fXG0/giphy.gif')";
+    document.getElementById("johnnyboy").play();
+  }
+
+
+
+</script>
+
+
+  </body>
+</html>
